@@ -13,6 +13,7 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 
 - Creates a new Phoenix project `mix phx.new nameProject --no-ecto`
 - Create the storage for the given repository `mix ecto.create`
+- Generates a migration `mix ecto.gen.migration add_posts_table`
 - Run the database migrations `mix ecto.migrate`
 - Start the Phoenix server `mix phx.server` or `iex -S mix phx.server`
 - Generates controller, JSON view, and context for a JSON resource `mix phx.gen.json Accounts User users name:string age:integer`
