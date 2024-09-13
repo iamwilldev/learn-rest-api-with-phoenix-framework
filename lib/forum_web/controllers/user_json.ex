@@ -23,7 +23,17 @@ defmodule ForumWeb.UserJSON do
     %{
       id: user.id,
       name: user.name,
-      email: user.email
+      email: user.email,
+      # posts: for(post <- user.posts, do: post_data(post))
+      posts: for(post <- user.posts, do: ForumWeb.PostJSON.data(post))
     }
   end
+
+  # defp post_data(%Post{} = post) do
+  #   %{
+  #     id: post.id,
+  #     body: post.body,
+  #     title: post.title
+  #   }
+  # end
 end

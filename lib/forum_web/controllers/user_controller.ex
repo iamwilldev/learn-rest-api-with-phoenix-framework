@@ -22,7 +22,7 @@ defmodule ForumWeb.UserController do
 
   def show(conn, %{"id" => id}) do
     user = Accounts.get_user!(id)
-    render(conn, :show, user: user)
+    render(conn, :show, user: user, success: true, message: "User successfully fetched")
   end
 
   def update(conn, %{"id" => id, "user" => user_params}) do
